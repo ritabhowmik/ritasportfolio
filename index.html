@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Rita</title>
+<title>Rita Bhowmik</title>
 
-  <meta property="og:title" content="Rita Bhowmik — Portfolio"/>
-  <meta property="og:description" content="BMath student at University of Waterloo. Engineering intern at Mespere LifeSciences, ML research at Titan Medical. Exploring data analytics and finance."/>
+  <meta property="og:title" content="Rita's Portfolio"/>
+  <meta property="og:description" content="Maths student at University of Waterloo. Engineering intern at Mespere LifeSciences, exploring data analytics and finance."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://ritabhowmik.github.io"/>
   <meta property="og:image" content="https://ritabhowmik.github.io/preview.jpg"/>
@@ -30,7 +30,6 @@
 html{scroll-behavior:smooth;}
 body{background:var(--white);color:var(--black);font-family:'DM Sans',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;}
 
-/* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;
   display:flex;justify-content:space-between;align-items:center;
@@ -46,7 +45,6 @@ nav{
 .nav__links a{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color 0.2s;}
 .nav__links a:hover{color:var(--black);}
 
-/* HERO */
 .hero{
   min-height:100vh;
   display:flex;
@@ -172,7 +170,6 @@ section{padding:4.5rem 4rem;border-bottom:0.5px solid var(--light);}
 .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:2rem;}
 .tag{font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;border:0.5px solid var(--black);padding:4px 11px;}
 
-/* EXPERIENCE */
 .exp__item{display:grid;grid-template-columns:180px 1fr;gap:2rem;padding:2.2rem 0;border-top:0.5px solid var(--light);}
 .exp__item:last-child{border-bottom:0.5px solid var(--light);}
 .exp__date{font-size:0.66rem;letter-spacing:0.06em;color:var(--mid);line-height:1.7;padding-top:0.15rem;}
@@ -182,12 +179,10 @@ section{padding:4.5rem 4rem;border-bottom:0.5px solid var(--light);}
 .exp__skills{display:flex;flex-wrap:wrap;gap:6px;margin-top:0.9rem;}
 .exp__skill{font-size:0.56rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);border:0.5px solid var(--light);padding:3px 8px;}
 
-/* PHOTO STRIPS */
 .exp__photos{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;margin-top:1.5rem;max-width:560px;}
 .exp__photos img{width:100%;height:140px;object-fit:cover;display:block;filter:grayscale(15%);border:0.5px solid var(--light);cursor:pointer;transition:opacity 0.2s;}
 .exp__photos img:hover{opacity:0.8;}
 
-/* LIGHTBOX */
 .lightbox{
   position:fixed;inset:0;
   background:rgba(10,10,10,0.92);
@@ -207,7 +202,7 @@ section{padding:4.5rem 4rem;border-bottom:0.5px solid var(--light);}
 }
 .lightbox__close:hover{border-color:#fff;}
 
-/* media upload mini cards (for r&d video/photo slots) */
+
 .exp__media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;margin-top:1.5rem;max-width:560px;}
 .exp__media-card{
   border:0.5px solid var(--light);
