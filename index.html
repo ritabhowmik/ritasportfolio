@@ -378,8 +378,6 @@ footer{padding:1.8rem 3.5rem;display:flex;justify-content:space-between;}
 }
 .form-btn:hover{opacity:0.75;}
 
-
-/* ── SCROLL PROGRESS ── */
 #scroll-progress{
   position:fixed;
   top:0;left:0;
@@ -390,7 +388,6 @@ footer{padding:1.8rem 3.5rem;display:flex;justify-content:space-between;}
   transition:width 0.05s linear;
 }
 
-/* ── DARK MODE ── */
 body.dark{
   --black:#f0ece6;
   --white:#0f0f0f;
@@ -1018,7 +1015,6 @@ body.dark #graph-canvas-wrap canvas{background:#161616;border-color:#2a2a2a;}
 </div>
 
 
-<!-- CONTACT FORM -->
 <section id="contact-form" style="padding:4.5rem 4rem;border-bottom:0.5px solid var(--light);background:#fdf8f6;">
   <p class="eyebrow reveal"><span class="eyebrow-sub" style="color:#c9a0a0;">Get in Touch</span>Send me a message</p>
   <div class="reveal" style="max-width:560px;">
@@ -1095,13 +1091,10 @@ function handleProjectMedia(input, divId){
   div.appendChild(el);
 }
 
-// ── DOM-DEPENDENT CODE ──
 document.addEventListener('DOMContentLoaded', function(){
 
-  // Escape key closes lightbox
   document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeLightbox(); });
 
-  // Scroll reveal
   const io = new IntersectionObserver(entries=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
   },{threshold:0.08});
@@ -1114,21 +1107,6 @@ document.addEventListener('DOMContentLoaded', function(){
       const total = document.documentElement.scrollHeight - window.innerHeight;
       progressBar.style.width = (window.scrollY / total * 100) + '%';
     }, { passive: true });
-  }
-
-  // Dark mode toggle
-  const darkBtn = document.getElementById('dark-toggle');
-  if(darkBtn){
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if(saved === 'dark' || (!saved && prefersDark)){
-      document.body.classList.add('dark'); darkBtn.textContent='☀';
-    }
-    darkBtn.addEventListener('click', ()=>{
-      const isDark = document.body.classList.toggle('dark');
-      darkBtn.textContent = isDark ? '☀' : '☽';
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
   }
 
   // Remove typewriter cursor after 3.5s
@@ -1210,7 +1188,6 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   };
 
-  // ── GRAPH THEORY EASTER EGG ──
   (function(){
     const canvas = document.getElementById('graph-canvas');
     if(!canvas) return;
