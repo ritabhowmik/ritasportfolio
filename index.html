@@ -430,8 +430,6 @@ body.dark footer{background:#0f0f0f;}
   transition:all 0.2s;
   box-shadow:0 2px 12px rgba(0,0,0,0.08);
 }
-#dark-toggle:hover{transform:scale(1.1);}
-
 /* ── HERO ANIMATION ── */
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(28px);}
@@ -446,18 +444,7 @@ body.dark footer{background:#0f0f0f;}
 .hero__currently{animation:fadeUp 0.7s ease both;animation-delay:0.62s;opacity:0;}
 .hero__photo-wrap{animation:fadeIn 1s ease both;animation-delay:0.3s;opacity:0;}
 .hero__bottom{animation:fadeIn 0.9s ease both;animation-delay:0.8s;opacity:0;}
-
-.hero__portfolio em::after{
-  content:'.✦ ݁˖';
-  animation:blink 1s step-end infinite;
-  color:var(--red);
-  font-style:normal;
-  margin-left:2px;
-  opacity:1;
 }
-@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
-/* remove cursor after a few seconds */
-.hero__portfolio em.cursor-done::after{display:none;}
 
 .ascii-divider{
   padding:2.5rem 4rem;
@@ -610,22 +597,6 @@ body.dark #graph-canvas-wrap canvas{background:#161616;border-color:#2a2a2a;}
 </head>
 <body>
 
-<div id="hire-banner" style="
-  position:fixed;top:58px;left:0;right:0;
-  background:var(--red);
-  color:#fff;
-  text-align:center;
-  padding:0.45rem 3rem;
-  font-family:'DM Sans',sans-serif;
-  font-size:0.6rem;
-  letter-spacing:0.18em;
-  text-transform:uppercase;
-  z-index:99;
-  display:flex;align-items:center;justify-content:center;gap:1.5rem;
-">
-  <span>&#10022; Available for Summer 2027 Co-op, Data Analytics &amp; Finance roles</span>
-  <button onclick="document.getElementById('hire-banner').style.display='none'" style="background:none;border:0.5px solid rgba(255,255,255,0.5);color:#fff;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;padding:2px 8px;cursor:pointer;font-family:'DM Sans',sans-serif;">.✦ ݁˖</button>
-</div>
 <div id="cursor-trail" style="position:fixed;width:16px;height:16px;border-radius:50%;background:rgba(201,160,160,0.35);pointer-events:none;z-index:9998;transition:opacity 0.3s;opacity:0;mix-blend-mode:multiply;transform:translate(-50%,-50%);"></div>
 <div id="scroll-progress"></div>
 <nav>
